@@ -146,7 +146,7 @@ const Home = () => {
               </div>
             ) : movies.length > 0 ? (
               <div className="movies-grid">
-                {movies.map((movie) => renderMovieItem(movie))}
+                {movies.map((movie) => ( <div key={movie.imdbID}>{renderMovieItem(movie)}</div> ))}
               </div>
             ) : (
               <div className="start-exploring">
